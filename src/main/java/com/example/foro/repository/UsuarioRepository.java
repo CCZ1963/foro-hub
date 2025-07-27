@@ -1,4 +1,5 @@
 // src/main/java/com/example/foro/repository/UsuarioRepository.java
+
 package com.example.foro.repository;
 
 import com.example.foro.model.Usuario;

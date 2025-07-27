@@ -2,7 +2,7 @@
 
 package com.example.foro.controller;
 
-// ✅ IMPORTS NECESARIOS
+import com.example.foro.dto.TopicoDTO;
 import com.example.foro.model.Topico;
 import com.example.foro.service.TopicoService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,12 +12,10 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-import com.example.foro.model.Usuario;
-import org.springframework.web.bind.annotation.*;
-
 @RestController
 @RequestMapping("/topicos")
 public class TopicoController {
+
     @Autowired
     private TopicoService topicoService;
 
@@ -35,13 +33,14 @@ public class TopicoController {
 
     @PostMapping
     public ResponseEntity<Topico> createTopico(@RequestBody TopicoDTO dto, Authentication authentication) {
-        Usuario autor = (Usuario) authentication.getPrincipal();
-        return ResponseEntity.ok(topicoService.createTopico(dto, autor));
+        Topico nuevoTopico = topicoService.createTopico(dto, authentication);
+        return ResponseEntity.ok(nuevoTopico);
     }
 
     @PutMapping("/{id}")
     public ResponseEntity<Topico> updateTopico(@PathVariable Long id, @RequestBody TopicoDTO dto) {
-        return ResponseEntity.ok(topicoService.updateTopico(id, dto));
+        Topico topicoActualizado = topicoService.updateTopico(id, dto);
+        return ResponseEntity.ok(topicoActualizado);
     }
 
     @DeleteMapping("/{id}")

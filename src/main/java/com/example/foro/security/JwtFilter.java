@@ -24,6 +24,12 @@ public class JwtFilter extends OncePerRequestFilter {
             SecurityContextHolder.getContext().setAuthentication(authentication);
         }
         filterChain.doFilter(request, response);
+
+        String email = jwtUtil.extractEmail(token);
+        UsernamePasswordAuthenticationToken authentication = new UsernamePasswordAuthenticationToken(
+                email, null, new ArrayList<>()
+        );
+        SecurityContextHolder.getContext().setAuthentication(authentication);
     }
 
     private String extractToken(HttpServletRequest request) {
