@@ -1,3 +1,7 @@
+// src/main/java/com/example/foro/service/UsuarioService.java
+
+package com.example.foro.service;
+
 import com.example.foro.model.Usuario;
 import com.example.foro.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -8,6 +12,7 @@ import java.util.Optional;
 
 @Service
 public class UsuarioService {
+
     @Autowired
     private UsuarioRepository usuarioRepository;
 
