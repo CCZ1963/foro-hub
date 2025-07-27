@@ -1,3 +1,5 @@
+package com.example.foro.service;
+
 import com.example.foro.model.Topico;
 import com.example.foro.model.Usuario;
 import com.example.foro.repository.TopicoRepository;

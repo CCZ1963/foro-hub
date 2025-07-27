@@ -1,5 +1,18 @@
+// src/main/java/com/example/foro/controller/TopicoController.java
+
+package com.example.foro.controller;
+
+// ✅ IMPORTS NECESARIOS
+import com.example.foro.model.Topico;
+import com.example.foro.service.TopicoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.core.Authentication;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
+
+import com.example.foro.model.Usuario;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
