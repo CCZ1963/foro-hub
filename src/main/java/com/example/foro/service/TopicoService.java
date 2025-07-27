@@ -8,8 +8,10 @@ import com.example.foro.model.Usuario;
 import com.example.foro.repository.TopicoRepository;
 import com.example.foro.repository.UsuarioRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.Authentication;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
 
@@ -31,8 +33,7 @@ public class TopicoService {
     }
 
     public Topico createTopico(TopicoDTO dto, Authentication authentication) {
-        // Obtener el usuario autenticado (que ya está en el contexto de seguridad)
-        String email = authentication.getName();
+        String email = authentication.getName(); // Obtiene el email del usuario autenticado
         Usuario autor = usuarioRepository.findByEmail(email)
                 .orElseThrow(() -> new RuntimeException("Usuario no encontrado"));
 
@@ -40,6 +41,7 @@ public class TopicoService {
         topico.setTitulo(dto.getTitulo());
         topico.setMensaje(dto.getMensaje());
         topico.setAutor(autor);
+        topico.setFechaCreacion(LocalDateTime.now());
 
         return topicoRepository.save(topico);
     }
