@@ -1,6 +1,6 @@
 ## 🔧 1. Practicando Spring Framework, API REST y SOLID: Challenge Foro Hub
 
-<center><img src="Estructura_del_proyecto.png" /></center>
+<center><img src="Changelle_foro_hub.png" /></center>
 
 ForoHub es una API REST desarrollada con Spring Framework para gestionar un foro de discusión. Los usuarios pueden crear, leer, actualizar y eliminar tópicos (CRUD). La API está diseñada siguiendo las mejores prácticas del modelo REST, e incluye validaciones, autenticación/autorización y una base de datos relacional para la persistencia de la información.
 
