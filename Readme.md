@@ -1,4 +1,8 @@
-Practicando Spring Framework, API REST y SOLID: Challenge Foro Hub
+## 🔧 1. Practicando Spring Framework, API REST y SOLID: Challenge Foro Hub
+
+<center><img src="Estructura_del_proyecto.png" /></center>
+
+ForoHub es una API REST desarrollada con Spring Framework para gestionar un foro de discusión. Los usuarios pueden crear, leer, actualizar y eliminar tópicos (CRUD). La API está diseñada siguiendo las mejores prácticas del modelo REST, e incluye validaciones, autenticación/autorización y una base de datos relacional para la persistencia de la información.
 
 La API esta centrada específicamente en los tópicos, y debe permitir a los usuarios:
 * Crear un nuevo tópico;
@@ -15,7 +19,7 @@ Los objetivo con este challenge es implementar una API REST con las siguientes f
 * Servicio de autenticación/autorización por medio de JWT.
 * Documentación con Swagger.
 
-## 🛠️ 1. Tecnologías Utilizadas
+## 🛠️ 2. Tecnologías Utilizadas
 
 | TECNOLOGÍA          | PROPÓSITO                                 |
 | ------------------- | ----------------------------------------- |
@@ -27,9 +31,9 @@ Los objetivo con este challenge es implementar una API REST con las siguientes f
 | Springdoc OpenAPI\| | Documentación automática de la API        |
 | PostgreSQL          | Base de datos                             |
 
-## 📦 2. Configuración Inicial
+## 📦 3. Configuración Inicial
 
-### 🧱 2.1. Crear proyecto Spring Boot
+### 🧱 3.1. Crear proyecto Spring Boot
 
 - **Project** : Maven
 - **Language** : Java
@@ -43,8 +47,7 @@ Los objetivo con este challenge es implementar una API REST con las siguientes f
     - PostgreSQL Driver (o H2 para desarrollo)
     -
 
-### 📁2.2. Estructura del Proyecto (ZIP)
+### 📁3.2. Estructura del Proyecto
 
 <center><img src="Estructura_del_proyecto.png" /></center>
-![[Estructura_del_proyecto.png]]
 
